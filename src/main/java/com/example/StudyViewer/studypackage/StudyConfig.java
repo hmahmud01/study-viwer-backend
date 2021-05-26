@@ -11,33 +11,32 @@ import java.util.List;
 
 @Configuration
 public class StudyConfig {
-
     @Bean
     CommandLineRunner commandLineRunner(StudyRepository studyRepository){
         return args -> {
             Patient patient = new Patient(
-                    "code32",
-                    "amy",
-                    "anderson",
+                    "PC01",
+                    "PersonFirst",
+                    "PersonLast",
                     LocalDate.now()
             );
 
             Patient patient1 = new Patient(
-                    "code33",
-                    "amy",
-                    "anderson",
+                    "PC02",
+                    "AnonymousFirst",
+                    "AnonymousLast",
                     LocalDate.now()
             );
 
             Study case1 = new Study(
-                    "case1",
-                    "case description",
+                    "DX",
+                    "Bilateral Hip J.",
                     LocalDateTime.now(),
                     patient);
 
             Study case2 = new Study(
-                    "case2",
-                    "Case Description for 2nd",
+                    "MR",
+                    "CEREBRAL",
                     LocalDateTime.now(),
                     patient1);
 

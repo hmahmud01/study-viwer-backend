@@ -10,21 +10,20 @@ import java.util.List;
 
 @Configuration
 public class PatientConfig {
-
     @Bean
     CommandLineRunner commandLineRunner2(PatientRepository patientRepository){
         return args -> {
             Patient patient1 = new Patient(
-                    "code 11112",
+                    "PC09",
                     "Johnny",
                     "Cage",
                     LocalDate.of(2001, Month.JANUARY, 21)
             );
 
             Patient patient2 = new Patient(
-                    "Code sex",
-                    "KIara",
-                    "Sins",
+                    "PC08",
+                    "Tony",
+                    "Stark",
                     LocalDate.of(2001, Month.APRIL, 4)
             );
 

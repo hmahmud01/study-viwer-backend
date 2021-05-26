@@ -1,13 +1,13 @@
-# study-viwer-backend
+#study-viwer-backend
 
-### Developed in Spring Boot
+Developed in Spring Boot
 A simple Study Viewer backend which will provide apis to add, update and list down the registered stuy list. 
 
 Project Requirements:
 - java 16.0.1
 - Spring Boot 2.5.0
 - gradle as build wrapper
-- postgresql
+- postgresql 13
 
 How to run the Project Guide
 
@@ -24,7 +24,7 @@ Before going through the build guide follow the DB SETUP and Application Configu
 
 Project build steps completes here.
 
-## DB SETUP GUIDE
+##DB SETUP GUIDE
 
 Make there is postgresql driver already installed in the OS. Otherwise follow the links to install postgresql drivers
 
@@ -39,7 +39,7 @@ After Installing the driver make sure its running and follow the steps.
 
 Database Setup step completes here. Follow the application configuration to connect the database to the application
 
-## Application Configuration
+##Application Configuration
 
 Find the file application.properties inside `~/project-root/src/main/resources/application.properties`
 Make sure the following properties are filled with appropriate values and configuration
@@ -54,7 +54,7 @@ To run the application run this command `gradlew bootRun`
 To run the jar file cd into the directory where the jar snapshot is located.(default url will be `~projectroot/build/libs`)
 run the command `java -jar StudyViewer-0.0.1-SNAPSHOT.jar`
 
-# IntelliJ IDEA Guide
+#IntelliJ IDEA Guide
 If you are Using Jetbrains IDE which is IntelliJ IDEA Follow the Steps given below.
 1. Complete the DB SETUP and application configuration setup
 2. press the green Play button in the top bar to run the project
@@ -63,6 +63,73 @@ If you are Using Jetbrains IDE which is IntelliJ IDEA Follow the Steps given bel
 5. find the build task inside StudyViewer > Tasks > build > build
 6. Run the task to build the project.
 7. Find the jar file inside `build/lib` and run `java -jar StudyViewer-0.0.1-SNAPSHOT.jar`
+
+#JSON Samples from api
+List of Study api - `http://localhost:8080/api/study`
+By Default there will be json data generating with 2 study information from backend command line runner bean.
+Api response = 
+   ```json 
+   [{
+    "id": 1,
+    "name": "DX",
+    "description": "Bilateral Hip J.",
+    "createdAt": "2021-05-26T16:59:56.326104",
+    "patient": {
+      "id": 3,
+      "personCode": "PC01",
+      "firstName": "PersonFirst",
+      "lastName": "PersonLast",
+      "dob": "2021-05-26"
+    }
+    }, {
+      "id": 2,
+      "name": "MR",
+      "description": "CEREBRAL",
+      "createdAt": "2021-05-26T16:59:56.328107",
+      "patient": {
+        "id": 4,
+        "personCode": "PC02",
+        "firstName": "AnonymousFirst",
+        "lastName": "AnonymousLast",
+        "dob": "2021-05-26"
+      }
+    }]
+   ```
+   
+List of Patient api - `http://localhost:8080/api/patient`
+By Default there will be json data generating with 4 patient (2 from the commandline runner and 2 from the study added infomration) information from backend command line runner bean.
+Api response = 
+   ```json 
+    [{
+      "id": 1,
+      "personCode": "PC09",
+      "firstName": "Johnny",
+      "lastName": "Cage",
+      "dob": "2001-01-21"
+    }, {
+      "id": 2,
+      "personCode": "PC08",
+      "firstName": "Tony",
+      "lastName": "Stark",
+      "dob": "2001-04-04"
+    }, {
+      "id": 3,
+      "personCode": "PC01",
+      "firstName": "PersonFirst",
+      "lastName": "PersonLast",
+      "dob": "2021-05-26"
+    }, {
+      "id": 4,
+      "personCode": "PC02",
+      "firstName": "AnonymousFirst",
+      "lastName": "AnonymousLast",
+      "dob": "2021-05-26"
+    }]
+   ```
+
+## PROJECT STRUCTURE
+All the study containing source code are in studypackage inside com.example.StudyViewer and patient containg source codes are in patientpackage.
+
 
 Project Documentation completes here. If there is any problem or confusion please email me here "hmahmud01@gmail.com"
 

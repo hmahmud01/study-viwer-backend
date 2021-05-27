@@ -1,6 +1,7 @@
 package com.example.StudyViewer.studypackage;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -19,12 +20,11 @@ public class StudyService {
     }
 
     public List<Study> getStudy() {
-        return studyRepository.findAll();
+        System.out.println(studyRepository.findAll());
+        return studyRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt"));
     }
 
     public void addStudy(Study study) {
-        System.out.println(study);
-        System.out.println(study.getPatient());
         studyRepository.save(study);
     }
 

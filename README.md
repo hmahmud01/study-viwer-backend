@@ -1,4 +1,4 @@
-#study-viwer-backend
+# Study-viewer-backend
 
 Developed in Spring Boot
 A simple Study Viewer backend which will provide apis to add, update and list down the registered stuy list. 

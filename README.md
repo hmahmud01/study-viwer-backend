@@ -59,7 +59,7 @@ run the command `java -jar StudyViewer-0.0.1-SNAPSHOT.jar`
 
 Both of these ways will result into similar output and the output will be saved in `~/projectroot/build/reports/tests/test/index.html`. Open that `index.html` file into browser to see the test results.
 
-#IntelliJ IDEA Guide
+# IntelliJ IDEA Guide
 If you are Using Jetbrains IDE which is IntelliJ IDEA Follow the Steps given below.
 1. Complete the DB SETUP and application configuration setup
 2. press the green Play button in the top bar to run the project

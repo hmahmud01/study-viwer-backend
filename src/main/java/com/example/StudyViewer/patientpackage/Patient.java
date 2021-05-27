@@ -1,7 +1,5 @@
 package com.example.StudyViewer.patientpackage;
 
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 

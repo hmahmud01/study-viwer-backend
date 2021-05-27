@@ -16,7 +16,6 @@ public class StudyController {
         this.studyService = studyService;
     }
 
-
     @GetMapping
     public List<Study> getStudy() {
         return studyService.getStudy();

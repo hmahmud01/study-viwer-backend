@@ -69,7 +69,7 @@ If you are Using Jetbrains IDE which is IntelliJ IDEA Follow the Steps given bel
 6. Run the task to build the project.
 7. Find the jar file inside `build/lib` and run `java -jar StudyViewer-0.0.1-SNAPSHOT.jar`
 
-#JSON Samples from api
+# JSON Samples from api
 List of Study api - `http://localhost:8080/api/study`
 By Default there will be json data generating with 2 study information from backend command line runner bean.
 Api response = 

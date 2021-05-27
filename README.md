@@ -24,7 +24,7 @@ Before going through the build guide follow the DB SETUP and Application Configu
 
 Project build steps completes here.
 
-##DB SETUP GUIDE
+## DB SETUP GUIDE
 
 Make there is postgresql driver already installed in the OS. Otherwise follow the links to install postgresql drivers
 
@@ -39,8 +39,7 @@ After Installing the driver make sure its running and follow the steps.
 
 Database Setup step completes here. Follow the application configuration to connect the database to the application
 
-##Application Configuration
-
+## APPLICATION CONFIGURATION
 Find the file application.properties inside `~/project-root/src/main/resources/application.properties`
 Make sure the following properties are filled with appropriate values and configuration
 - Fill up the data source url here `spring.datasource.url=jdbc:postgresql://localhost:5432/study` change the port address if there is any other port you prefer.
@@ -53,6 +52,12 @@ To run the application run this command `gradlew bootRun`
 
 To run the jar file cd into the directory where the jar snapshot is located.(default url will be `~projectroot/build/libs`)
 run the command `java -jar StudyViewer-0.0.1-SNAPSHOT.jar`
+
+## APPLICATION TEST GUIDE
+- Find the file `StudyViewerApplicationTests` into `~/projectroot/src/test/java/com/example/StudyViewer`. If you are in IntelliJ IDEA, then right click over file and select run from the menu to run the tests. or open the test file and press `ctrl+shift+F10` to run the test command
+- If you are from command line, then cd into project root folder and run `gradlew test` to get test test result of the project.
+
+Both of these ways will result into similar output and the output will be saved in `~/projectroot/build/reports/tests/test/index.html`. Open that `index.html` file into browser to see the test results.
 
 #IntelliJ IDEA Guide
 If you are Using Jetbrains IDE which is IntelliJ IDEA Follow the Steps given below.
